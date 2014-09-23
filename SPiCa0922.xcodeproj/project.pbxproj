@@ -21,6 +21,23 @@
 		201BA19B19D06F8900D41141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA17D19D06F8900D41141 /* UIKit.framework */; };
 		201BA1A319D06F8900D41141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1A119D06F8900D41141 /* InfoPlist.strings */; };
 		201BA1A519D06F8900D41141 /* SPiCa0922Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA1A419D06F8900D41141 /* SPiCa0922Tests.m */; };
+		201BA1B019D0706500D41141 /* editLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA1AF19D0706500D41141 /* editLineViewController.m */; };
+		201BA1B719D0707D00D41141 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B219D0707D00D41141 /* back1.png */; };
+		201BA1B819D0707D00D41141 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B319D0707D00D41141 /* back2.png */; };
+		201BA1B919D0707D00D41141 /* back3.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B419D0707D00D41141 /* back3.png */; };
+		201BA1BA19D0707D00D41141 /* back4.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B519D0707D00D41141 /* back4.png */; };
+		201BA1BB19D0707D00D41141 /* back5.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B619D0707D00D41141 /* back5.png */; };
+		201BA1C519D0708800D41141 /* hoshi01.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BD19D0708800D41141 /* hoshi01.png */; };
+		201BA1C619D0708800D41141 /* hoshi11.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BE19D0708800D41141 /* hoshi11.png */; };
+		201BA1C719D0708800D41141 /* hoshi12.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BF19D0708800D41141 /* hoshi12.png */; };
+		201BA1C819D0708800D41141 /* hoshi13.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C019D0708800D41141 /* hoshi13.png */; };
+		201BA1C919D0708800D41141 /* hoshi21.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C119D0708800D41141 /* hoshi21.png */; };
+		201BA1CA19D0708800D41141 /* hoshi22.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C219D0708800D41141 /* hoshi22.png */; };
+		201BA1CB19D0708800D41141 /* hoshi23.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C319D0708800D41141 /* hoshi23.png */; };
+		201BA1CC19D0708800D41141 /* hoshi99.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C419D0708800D41141 /* hoshi99.png */; };
+		201BA1CF19D07F5700D41141 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA1CE19D07F5700D41141 /* DragView.m */; };
+		201BA1D319D123D600D41141 /* kingyo.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1D219D123D600D41141 /* kingyo.png */; };
+		201BA1D519D12C0F00D41141 /* musaisyoku.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1D419D12C0F00D41141 /* musaisyoku.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +70,25 @@
 		201BA1A019D06F8900D41141 /* SPiCa0922Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPiCa0922Tests-Info.plist"; sourceTree = "<group>"; };
 		201BA1A219D06F8900D41141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		201BA1A419D06F8900D41141 /* SPiCa0922Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPiCa0922Tests.m; sourceTree = "<group>"; };
+		201BA1AE19D0706500D41141 /* editLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editLineViewController.h; sourceTree = "<group>"; };
+		201BA1AF19D0706500D41141 /* editLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editLineViewController.m; sourceTree = "<group>"; };
+		201BA1B219D0707D00D41141 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
+		201BA1B319D0707D00D41141 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		201BA1B419D0707D00D41141 /* back3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3.png; sourceTree = "<group>"; };
+		201BA1B519D0707D00D41141 /* back4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4.png; sourceTree = "<group>"; };
+		201BA1B619D0707D00D41141 /* back5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back5.png; sourceTree = "<group>"; };
+		201BA1BD19D0708800D41141 /* hoshi01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi01.png; sourceTree = "<group>"; };
+		201BA1BE19D0708800D41141 /* hoshi11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi11.png; sourceTree = "<group>"; };
+		201BA1BF19D0708800D41141 /* hoshi12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi12.png; sourceTree = "<group>"; };
+		201BA1C019D0708800D41141 /* hoshi13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi13.png; sourceTree = "<group>"; };
+		201BA1C119D0708800D41141 /* hoshi21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi21.png; sourceTree = "<group>"; };
+		201BA1C219D0708800D41141 /* hoshi22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi22.png; sourceTree = "<group>"; };
+		201BA1C319D0708800D41141 /* hoshi23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi23.png; sourceTree = "<group>"; };
+		201BA1C419D0708800D41141 /* hoshi99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi99.png; sourceTree = "<group>"; };
+		201BA1CD19D07F5700D41141 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
+		201BA1CE19D07F5700D41141 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
+		201BA1D219D123D600D41141 /* kingyo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingyo.png; sourceTree = "<group>"; };
+		201BA1D419D12C0F00D41141 /* musaisyoku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musaisyoku.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +148,8 @@
 		201BA17F19D06F8900D41141 /* SPiCa0922 */ = {
 			isa = PBXGroup;
 			children = (
+				201BA1B119D0707D00D41141 /* background */,
+				201BA1BC19D0708800D41141 /* stamps */,
 				201BA18819D06F8900D41141 /* AppDelegate.h */,
 				201BA18919D06F8900D41141 /* AppDelegate.m */,
 				201BA18B19D06F8900D41141 /* Main.storyboard */,
@@ -119,6 +157,12 @@
 				201BA18F19D06F8900D41141 /* ViewController.m */,
 				201BA19119D06F8900D41141 /* Images.xcassets */,
 				201BA18019D06F8900D41141 /* Supporting Files */,
+				201BA1AE19D0706500D41141 /* editLineViewController.h */,
+				201BA1AF19D0706500D41141 /* editLineViewController.m */,
+				201BA1CD19D07F5700D41141 /* DragView.h */,
+				201BA1CE19D07F5700D41141 /* DragView.m */,
+				201BA1D219D123D600D41141 /* kingyo.png */,
+				201BA1D419D12C0F00D41141 /* musaisyoku.png */,
 			);
 			path = SPiCa0922;
 			sourceTree = "<group>";
@@ -150,6 +194,34 @@
 				201BA1A119D06F8900D41141 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		201BA1B119D0707D00D41141 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				201BA1B219D0707D00D41141 /* back1.png */,
+				201BA1B319D0707D00D41141 /* back2.png */,
+				201BA1B419D0707D00D41141 /* back3.png */,
+				201BA1B519D0707D00D41141 /* back4.png */,
+				201BA1B619D0707D00D41141 /* back5.png */,
+			);
+			path = background;
+			sourceTree = "<group>";
+		};
+		201BA1BC19D0708800D41141 /* stamps */ = {
+			isa = PBXGroup;
+			children = (
+				201BA1BD19D0708800D41141 /* hoshi01.png */,
+				201BA1BE19D0708800D41141 /* hoshi11.png */,
+				201BA1BF19D0708800D41141 /* hoshi12.png */,
+				201BA1C019D0708800D41141 /* hoshi13.png */,
+				201BA1C119D0708800D41141 /* hoshi21.png */,
+				201BA1C219D0708800D41141 /* hoshi22.png */,
+				201BA1C319D0708800D41141 /* hoshi23.png */,
+				201BA1C419D0708800D41141 /* hoshi99.png */,
+			);
+			name = stamps;
+			path = background/stamps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +300,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201BA1B919D0707D00D41141 /* back3.png in Resources */,
+				201BA1C619D0708800D41141 /* hoshi11.png in Resources */,
+				201BA1CB19D0708800D41141 /* hoshi23.png in Resources */,
 				201BA19219D06F8900D41141 /* Images.xcassets in Resources */,
+				201BA1C519D0708800D41141 /* hoshi01.png in Resources */,
+				201BA1BB19D0707D00D41141 /* back5.png in Resources */,
+				201BA1C919D0708800D41141 /* hoshi21.png in Resources */,
+				201BA1C819D0708800D41141 /* hoshi13.png in Resources */,
+				201BA1BA19D0707D00D41141 /* back4.png in Resources */,
 				201BA18419D06F8900D41141 /* InfoPlist.strings in Resources */,
+				201BA1B719D0707D00D41141 /* back1.png in Resources */,
+				201BA1CC19D0708800D41141 /* hoshi99.png in Resources */,
 				201BA18D19D06F8900D41141 /* Main.storyboard in Resources */,
+				201BA1CA19D0708800D41141 /* hoshi22.png in Resources */,
+				201BA1D319D123D600D41141 /* kingyo.png in Resources */,
+				201BA1C719D0708800D41141 /* hoshi12.png in Resources */,
+				201BA1B819D0707D00D41141 /* back2.png in Resources */,
+				201BA1D519D12C0F00D41141 /* musaisyoku.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201BA1B019D0706500D41141 /* editLineViewController.m in Sources */,
 				201BA19019D06F8900D41141 /* ViewController.m in Sources */,
 				201BA18A19D06F8900D41141 /* AppDelegate.m in Sources */,
 				201BA18619D06F8900D41141 /* main.m in Sources */,
+				201BA1CF19D07F5700D41141 /* DragView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
