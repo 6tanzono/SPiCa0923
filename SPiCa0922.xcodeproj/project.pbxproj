@@ -36,10 +36,9 @@
 		201BA1CB19D0708800D41141 /* hoshi23.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C319D0708800D41141 /* hoshi23.png */; };
 		201BA1CC19D0708800D41141 /* hoshi99.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C419D0708800D41141 /* hoshi99.png */; };
 		201BA1CF19D07F5700D41141 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA1CE19D07F5700D41141 /* DragView.m */; };
-		201BA1D319D123D600D41141 /* kingyo.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1D219D123D600D41141 /* kingyo.png */; };
-		201BA1D519D12C0F00D41141 /* musaisyoku.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1D419D12C0F00D41141 /* musaisyoku.png */; };
-		201BA1D719D2F75900D41141 /* hisyatai.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1D619D2F75900D41141 /* hisyatai.png */; };
 		201BA1D919D305D100D41141 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA1D819D305D100D41141 /* opencv2.framework */; };
+		2020AE1219D4542D00951053 /* hisyatai1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2020AE1019D4542D00951053 /* hisyatai1.png */; };
+		2020AE1319D4542D00951053 /* hisyatai2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2020AE1119D4542D00951053 /* hisyatai2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,10 +88,9 @@
 		201BA1C419D0708800D41141 /* hoshi99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi99.png; sourceTree = "<group>"; };
 		201BA1CD19D07F5700D41141 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		201BA1CE19D07F5700D41141 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
-		201BA1D219D123D600D41141 /* kingyo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingyo.png; sourceTree = "<group>"; };
-		201BA1D419D12C0F00D41141 /* musaisyoku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musaisyoku.png; sourceTree = "<group>"; };
-		201BA1D619D2F75900D41141 /* hisyatai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai.png; sourceTree = "<group>"; };
 		201BA1D819D305D100D41141 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		2020AE1019D4542D00951053 /* hisyatai1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai1.png; sourceTree = "<group>"; };
+		2020AE1119D4542D00951053 /* hisyatai2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +154,7 @@
 			children = (
 				201BA1B119D0707D00D41141 /* background */,
 				201BA1BC19D0708800D41141 /* stamps */,
+				2020AE0719D450F400951053 /* images */,
 				201BA18819D06F8900D41141 /* AppDelegate.h */,
 				201BA18919D06F8900D41141 /* AppDelegate.m */,
 				201BA18B19D06F8900D41141 /* Main.storyboard */,
@@ -167,9 +166,6 @@
 				201BA1AF19D0706500D41141 /* editLineViewController.m */,
 				201BA1CD19D07F5700D41141 /* DragView.h */,
 				201BA1CE19D07F5700D41141 /* DragView.m */,
-				201BA1D219D123D600D41141 /* kingyo.png */,
-				201BA1D619D2F75900D41141 /* hisyatai.png */,
-				201BA1D419D12C0F00D41141 /* musaisyoku.png */,
 			);
 			path = SPiCa0922;
 			sourceTree = "<group>";
@@ -229,6 +225,15 @@
 			);
 			name = stamps;
 			path = background/stamps;
+			sourceTree = "<group>";
+		};
+		2020AE0719D450F400951053 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2020AE1019D4542D00951053 /* hisyatai1.png */,
+				2020AE1119D4542D00951053 /* hisyatai2.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,13 +324,12 @@
 				201BA18419D06F8900D41141 /* InfoPlist.strings in Resources */,
 				201BA1B719D0707D00D41141 /* back1.png in Resources */,
 				201BA1CC19D0708800D41141 /* hoshi99.png in Resources */,
-				201BA1D719D2F75900D41141 /* hisyatai.png in Resources */,
+				2020AE1219D4542D00951053 /* hisyatai1.png in Resources */,
 				201BA18D19D06F8900D41141 /* Main.storyboard in Resources */,
+				2020AE1319D4542D00951053 /* hisyatai2.png in Resources */,
 				201BA1CA19D0708800D41141 /* hoshi22.png in Resources */,
-				201BA1D319D123D600D41141 /* kingyo.png in Resources */,
 				201BA1C719D0708800D41141 /* hoshi12.png in Resources */,
 				201BA1B819D0707D00D41141 /* back2.png in Resources */,
-				201BA1D519D12C0F00D41141 /* musaisyoku.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

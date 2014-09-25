@@ -12,6 +12,8 @@
 // opencv の import
 #import <opencv2/opencv.hpp>
 #import <opencv2/highgui/ios.h>
+#import <opencv2/legacy/legacy.hpp>
+#import <opencv2/opencv_modules.hpp>
 
 @interface ViewController ()
 
@@ -50,30 +52,75 @@ NSMutableArray *stars;
     CGFloat availableHeight = screenHeight - statusBarHeight - navBarHeight;
     CGFloat availableWidth = screenWidth;
     
-    //ここで渡された画像を表示
-    //フィルターもここかな？
-    //ベースとなる画像の貼付け
     showImageView = [[UIImageView alloc] init];
-    //showImageView.image = [UIImage imageNamed:@"hisyatai.png"];
     
-    CIImage *ciImage = [[CIImage alloc]initWithImage:[UIImage imageNamed:@"hisyatai.png"]];
+    //showImageView.image = [UIImage imageNamed:@"back1.png"];
+    //cv::Mat     mat = [self matWithImage:[UIImage imageNamed:@"hisyatai.png"]];
     
+    
+    //背景画像の追加
+    UIImageView *backView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back3.png"]];
+    backView.frame = CGRectMake(0, statusBarHeight + navBarHeight, availableWidth, availableHeight);
+    backView.contentMode = UIViewContentModeScaleAspectFit;
+    backView.tag = 0;
+    [self.view addSubview:backView];
+    
+    
+    //領域分割
+    CvRect roi;
+    CvMemStorage *storage = 0;
+    CvSeq *comp = 0;
+    storage = cvCreateMemStorage (0);
+    IplImage *aaaaa = [self IplImageFromUIImage:[UIImage imageNamed:@"hisyatai1.png"]];
+    roi.x = roi.y = 0;
+    roi.width = aaaaa->width & -(1 << 4);
+    roi.height = aaaaa->height & -(1 << 4);
+    cvSetImageROI (aaaaa, roi);
+    IplImage *dst_img = cvCloneImage (aaaaa);
+    cvPyrSegmentation (aaaaa, dst_img, storage, &comp, 4, 255.0, 100.0);
+    cvReleaseMemStorage (&storage);
+    showImageView.image = [self UIImageFromIplImage:dst_img];
+    
+    
+    
+    cv::Mat     mat = [self matWithImage:showImageView.image];
+    
+    /*
+    // グレイスケール化してから適応的二値化
+    cv::cvtColor(mat, mat, CV_BGR2GRAY);
+    cv::adaptiveThreshold(mat, mat, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 7, 8);
+    showImageView.image = MatToUIImage(mat);
+    */
+    /*
+    // グレイスケール化してから大津法で二値化
+    cv::cvtColor(mat, mat, CV_BGR2GRAY);
+    cv::threshold(mat, mat, 0, 255, cv::THRESH_BINARY|cv::THRESH_OTSU);
+    showImageView.image = MatToUIImage(mat);
+    */
+    //showImageView.alpha = 0.08;
+    
+    //CIFilterで合成
+    /*
+     CIImage *ciImage = [[CIImage alloc]initWithImage:[UIImage imageNamed:@"back1.png"]];
+    
+     CIFilter *ciFilter = [CIFilter filterWithName:@"CIAdditionCompositing" keysAndValues:kCIInputImageKey,[[CIImage alloc] initWithImage:showImageView.image],@"inputBackgroundImage",ciImage,nil];
+     CIContext *ciContext = [CIContext contextWithOptions:nil];
+     CGImageRef cgimg = [ciContext createCGImage:[ciFilter outputImage] fromRect:[[ciFilter outputImage] extent]];
+     showImageView.image = [UIImage imageWithCGImage:cgimg scale:1.0f orientation:UIImageOrientationUp];
+     CGImageRelease(cgimg);
+    */
 
-     NSNumber* nsIntensity = @1.0f;
-  
-    CIFilter *ciFilter = [CIFilter filterWithName:@"CIEdgeWork" keysAndValues:kCIInputImageKey,ciImage,/*@"inputIntensity",nsIntensity,*/ nil];
-    CIContext *ciContext = [CIContext contextWithOptions:nil];
-    CGImageRef cgimg = [ciContext createCGImage:[ciFilter outputImage] fromRect:[[ciFilter outputImage] extent]];
-    showImageView.image = [UIImage imageWithCGImage:cgimg scale:1.0f orientation:UIImageOrientationUp];
-    CGImageRelease(cgimg);
+    /*
+    // ImageViewのサイズを取得する
+    CGSize size = showImageView.frame.size;
     
+    // 重ねて描画したい画像の配列を作成します
+    NSArray *images = @[[UIImage imageNamed:@"kingyo.png"],
+                        [UIImage imageNamed:@"hisyatai.png"]];
     
-    
- 
-    
-    
-    
-    
+    // 生成したUIImageオブジェクトをImageViewに設定する
+    showImageView.image = [self compositeImages:images size:size];
+    */
     
     //[showImageView setFrame:[[UIScreen mainScreen]applicationFrame]];
     
@@ -83,6 +130,7 @@ NSMutableArray *stars;
     showImageView.tag = 0;
     [self.view addSubview:showImageView];
     
+    
     //初期化
     currentStampView = nil;
     _isPressStamp = NO;
@@ -90,6 +138,114 @@ NSMutableArray *stars;
     
 }
 
+//uiimageからiplimageを作成するメソッド
+- (IplImage*)IplImageFromUIImage:(UIImage*)image
+{
+    CGImageRef imageRef = image.CGImage;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    IplImage *iplimage = cvCreateImage(cvSize(image.size.width,image.size.height), IPL_DEPTH_8U, 4 );
+    
+    CGContextRef contextRef = CGBitmapContextCreate(
+                                                    iplimage->imageData,
+                                                    iplimage->width,
+                                                    iplimage->height,
+                                                    iplimage->depth,
+                                                    iplimage->widthStep,
+                                                    colorSpace,
+                                                    kCGImageAlphaPremultipliedLast|kCGBitmapByteOrderDefault);
+    CGContextDrawImage(contextRef,
+                       CGRectMake(0, 0, image.size.width, image.size.height),
+                       imageRef);
+    
+    CGContextRelease(contextRef);
+    CGColorSpaceRelease(colorSpace);
+    
+    IplImage *ret = cvCreateImage(cvGetSize(iplimage), IPL_DEPTH_8U, 3);
+    cvCvtColor(iplimage, ret, CV_RGBA2BGR);
+    cvReleaseImage(&iplimage);
+    
+    return ret;
+}
+//iplimageからuiimageを作成するメソッド
+- (UIImage*)UIImageFromIplImage:(IplImage*)image
+{
+    CGColorSpaceRef colorSpace;
+    if (image->nChannels == 1)
+    {
+        colorSpace = CGColorSpaceCreateDeviceGray();
+    } else {
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+        //BGRになっているのでRGBに変換
+        cvCvtColor(image, image, CV_BGR2RGB);
+    }
+    NSData *data = [NSData dataWithBytes:image->imageData length:image->imageSize];
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+    CGImageRef imageRef = CGImageCreate(image->width,
+                                        image->height,
+                                        image->depth,
+                                        image->depth * image->nChannels,
+                                        image->widthStep,
+                                        colorSpace,
+                                        kCGImageAlphaNone|kCGBitmapByteOrderDefault,
+                                        provider,
+                                        NULL,
+                                        false,
+                                        kCGRenderingIntentDefault
+                                        );
+    UIImage *ret = [UIImage imageWithCGImage:imageRef];
+    
+    CGImageRelease(imageRef);
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpace);
+    
+    return ret;
+}
+
+//合成するメソッド
+- (UIImage *)compositeImages:(NSArray *)array size:(CGSize)size
+{
+    UIImage *image = nil;
+    
+    // ビットマップ形式のグラフィックスコンテキストの生成
+    UIGraphicsBeginImageContextWithOptions(size, 0.f, 0);
+    
+    // 塗りつぶす領域を決める
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    
+    for (id item in array) {
+        if (![item isKindOfClass:[UIImage class]]) {
+            continue;
+        }
+        UIImage *img = item;
+        [img drawInRect:rect];
+    }
+    
+    // 現在のグラフィックスコンテキストの画像を取得する
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 現在のグラフィックスコンテキストへの編集を終了
+    // (スタックの先頭から削除する)
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+//uiimageをmatに変換するメソッド
+- (cv::Mat)matWithImage:(UIImage*)image
+{
+    // 画像の回転を補正する（内蔵カメラで撮影した画像などでおかしな方向にならないようにする）
+    UIImage* correctImage = image;
+    UIGraphicsBeginImageContext(correctImage.size);
+    [correctImage drawInRect:CGRectMake(0, 0, correctImage.size.width, correctImage.size.height)];
+    correctImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // UIImage -> cv::Mat
+    cv::Mat mat;
+    
+    UIImageToMat(correctImage, mat);
+    return mat;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -139,7 +295,7 @@ NSMutableArray *stars;
     currentStampView.image = outputImage;
     */
     
-    UIImage *originImage = [UIImage imageNamed:@"kingyo.png"];
+    UIImage *originImage = [UIImage imageNamed:@"hoshi11.png"];
 
     UIColor* monochromeColor = [UIColor yellowColor];
 
