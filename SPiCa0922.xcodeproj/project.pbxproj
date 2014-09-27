@@ -14,7 +14,7 @@
 		201BA18619D06F8900D41141 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA18519D06F8900D41141 /* main.m */; };
 		201BA18A19D06F8900D41141 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA18919D06F8900D41141 /* AppDelegate.m */; };
 		201BA18D19D06F8900D41141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201BA18B19D06F8900D41141 /* Main.storyboard */; };
-		201BA19019D06F8900D41141 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 201BA18F19D06F8900D41141 /* ViewController.mm */; };
+		201BA19019D06F8900D41141 /* editStarViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 201BA18F19D06F8900D41141 /* editStarViewController.mm */; };
 		201BA19219D06F8900D41141 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201BA19119D06F8900D41141 /* Images.xcassets */; };
 		201BA19919D06F8900D41141 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA19819D06F8900D41141 /* XCTest.framework */; };
 		201BA19A19D06F8900D41141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA17919D06F8900D41141 /* Foundation.framework */; };
@@ -27,18 +27,18 @@
 		201BA1B919D0707D00D41141 /* back3.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B419D0707D00D41141 /* back3.png */; };
 		201BA1BA19D0707D00D41141 /* back4.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B519D0707D00D41141 /* back4.png */; };
 		201BA1BB19D0707D00D41141 /* back5.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1B619D0707D00D41141 /* back5.png */; };
-		201BA1C519D0708800D41141 /* hoshi01.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BD19D0708800D41141 /* hoshi01.png */; };
-		201BA1C619D0708800D41141 /* hoshi11.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BE19D0708800D41141 /* hoshi11.png */; };
-		201BA1C719D0708800D41141 /* hoshi12.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1BF19D0708800D41141 /* hoshi12.png */; };
-		201BA1C819D0708800D41141 /* hoshi13.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C019D0708800D41141 /* hoshi13.png */; };
-		201BA1C919D0708800D41141 /* hoshi21.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C119D0708800D41141 /* hoshi21.png */; };
-		201BA1CA19D0708800D41141 /* hoshi22.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C219D0708800D41141 /* hoshi22.png */; };
-		201BA1CB19D0708800D41141 /* hoshi23.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C319D0708800D41141 /* hoshi23.png */; };
-		201BA1CC19D0708800D41141 /* hoshi99.png in Resources */ = {isa = PBXBuildFile; fileRef = 201BA1C419D0708800D41141 /* hoshi99.png */; };
 		201BA1CF19D07F5700D41141 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 201BA1CE19D07F5700D41141 /* DragView.m */; };
 		201BA1D919D305D100D41141 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA1D819D305D100D41141 /* opencv2.framework */; };
-		2020AE1219D4542D00951053 /* hisyatai1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2020AE1019D4542D00951053 /* hisyatai1.png */; };
-		2020AE1319D4542D00951053 /* hisyatai2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2020AE1119D4542D00951053 /* hisyatai2.png */; };
+		20282DC619D69F9500938303 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20282DC519D69F9500938303 /* homeViewController.m */; };
+		20282DD019D6AC8200938303 /* hoshi01.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DC819D6AC8200938303 /* hoshi01.png */; };
+		20282DD119D6AC8200938303 /* hoshi11.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DC919D6AC8200938303 /* hoshi11.png */; };
+		20282DD219D6AC8200938303 /* hoshi12.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCA19D6AC8200938303 /* hoshi12.png */; };
+		20282DD319D6AC8200938303 /* hoshi13.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCB19D6AC8200938303 /* hoshi13.png */; };
+		20282DD419D6AC8200938303 /* hoshi21.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCC19D6AC8200938303 /* hoshi21.png */; };
+		20282DD519D6AC8200938303 /* hoshi22.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCD19D6AC8200938303 /* hoshi22.png */; };
+		20282DD619D6AC8200938303 /* hoshi23.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCE19D6AC8200938303 /* hoshi23.png */; };
+		20282DD719D6AC8200938303 /* hoshi99.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DCF19D6AC8200938303 /* hoshi99.png */; };
+		20282DD919D6BA1800938303 /* hisyatai1.png in Resources */ = {isa = PBXBuildFile; fileRef = 20282DD819D6BA1800938303 /* hisyatai1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		201BA18819D06F8900D41141 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201BA18919D06F8900D41141 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		201BA18C19D06F8900D41141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		201BA18E19D06F8900D41141 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		201BA18F19D06F8900D41141 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		201BA18E19D06F8900D41141 /* editStarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editStarViewController.h; sourceTree = "<group>"; };
+		201BA18F19D06F8900D41141 /* editStarViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = editStarViewController.mm; sourceTree = "<group>"; };
 		201BA19119D06F8900D41141 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		201BA19719D06F8900D41141 /* SPiCa0922Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPiCa0922Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201BA19819D06F8900D41141 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -78,19 +78,20 @@
 		201BA1B419D0707D00D41141 /* back3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3.png; sourceTree = "<group>"; };
 		201BA1B519D0707D00D41141 /* back4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4.png; sourceTree = "<group>"; };
 		201BA1B619D0707D00D41141 /* back5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back5.png; sourceTree = "<group>"; };
-		201BA1BD19D0708800D41141 /* hoshi01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi01.png; sourceTree = "<group>"; };
-		201BA1BE19D0708800D41141 /* hoshi11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi11.png; sourceTree = "<group>"; };
-		201BA1BF19D0708800D41141 /* hoshi12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi12.png; sourceTree = "<group>"; };
-		201BA1C019D0708800D41141 /* hoshi13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi13.png; sourceTree = "<group>"; };
-		201BA1C119D0708800D41141 /* hoshi21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi21.png; sourceTree = "<group>"; };
-		201BA1C219D0708800D41141 /* hoshi22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi22.png; sourceTree = "<group>"; };
-		201BA1C319D0708800D41141 /* hoshi23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi23.png; sourceTree = "<group>"; };
-		201BA1C419D0708800D41141 /* hoshi99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi99.png; sourceTree = "<group>"; };
 		201BA1CD19D07F5700D41141 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		201BA1CE19D07F5700D41141 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		201BA1D819D305D100D41141 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		2020AE1019D4542D00951053 /* hisyatai1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai1.png; sourceTree = "<group>"; };
-		2020AE1119D4542D00951053 /* hisyatai2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai2.png; sourceTree = "<group>"; };
+		20282DC519D69F9500938303 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		20282DC719D69FCB00938303 /* homeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
+		20282DC819D6AC8200938303 /* hoshi01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi01.png; sourceTree = "<group>"; };
+		20282DC919D6AC8200938303 /* hoshi11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi11.png; sourceTree = "<group>"; };
+		20282DCA19D6AC8200938303 /* hoshi12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi12.png; sourceTree = "<group>"; };
+		20282DCB19D6AC8200938303 /* hoshi13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi13.png; sourceTree = "<group>"; };
+		20282DCC19D6AC8200938303 /* hoshi21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi21.png; sourceTree = "<group>"; };
+		20282DCD19D6AC8200938303 /* hoshi22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi22.png; sourceTree = "<group>"; };
+		20282DCE19D6AC8200938303 /* hoshi23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi23.png; sourceTree = "<group>"; };
+		20282DCF19D6AC8200938303 /* hoshi99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoshi99.png; sourceTree = "<group>"; };
+		20282DD819D6BA1800938303 /* hisyatai1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hisyatai1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,14 +159,17 @@
 				201BA18819D06F8900D41141 /* AppDelegate.h */,
 				201BA18919D06F8900D41141 /* AppDelegate.m */,
 				201BA18B19D06F8900D41141 /* Main.storyboard */,
-				201BA18E19D06F8900D41141 /* ViewController.h */,
-				201BA18F19D06F8900D41141 /* ViewController.mm */,
-				201BA19119D06F8900D41141 /* Images.xcassets */,
-				201BA18019D06F8900D41141 /* Supporting Files */,
+				201BA18E19D06F8900D41141 /* editStarViewController.h */,
+				201BA18F19D06F8900D41141 /* editStarViewController.mm */,
 				201BA1AE19D0706500D41141 /* editLineViewController.h */,
 				201BA1AF19D0706500D41141 /* editLineViewController.m */,
+				20282DC719D69FCB00938303 /* homeViewController.h */,
+				20282DC519D69F9500938303 /* homeViewController.m */,
 				201BA1CD19D07F5700D41141 /* DragView.h */,
 				201BA1CE19D07F5700D41141 /* DragView.m */,
+				20282DD819D6BA1800938303 /* hisyatai1.png */,
+				201BA19119D06F8900D41141 /* Images.xcassets */,
+				201BA18019D06F8900D41141 /* Supporting Files */,
 			);
 			path = SPiCa0922;
 			sourceTree = "<group>";
@@ -214,14 +218,14 @@
 		201BA1BC19D0708800D41141 /* stamps */ = {
 			isa = PBXGroup;
 			children = (
-				201BA1BD19D0708800D41141 /* hoshi01.png */,
-				201BA1BE19D0708800D41141 /* hoshi11.png */,
-				201BA1BF19D0708800D41141 /* hoshi12.png */,
-				201BA1C019D0708800D41141 /* hoshi13.png */,
-				201BA1C119D0708800D41141 /* hoshi21.png */,
-				201BA1C219D0708800D41141 /* hoshi22.png */,
-				201BA1C319D0708800D41141 /* hoshi23.png */,
-				201BA1C419D0708800D41141 /* hoshi99.png */,
+				20282DC819D6AC8200938303 /* hoshi01.png */,
+				20282DC919D6AC8200938303 /* hoshi11.png */,
+				20282DCA19D6AC8200938303 /* hoshi12.png */,
+				20282DCB19D6AC8200938303 /* hoshi13.png */,
+				20282DCC19D6AC8200938303 /* hoshi21.png */,
+				20282DCD19D6AC8200938303 /* hoshi22.png */,
+				20282DCE19D6AC8200938303 /* hoshi23.png */,
+				20282DCF19D6AC8200938303 /* hoshi99.png */,
 			);
 			name = stamps;
 			path = background/stamps;
@@ -230,8 +234,6 @@
 		2020AE0719D450F400951053 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2020AE1019D4542D00951053 /* hisyatai1.png */,
-				2020AE1119D4542D00951053 /* hisyatai2.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -313,23 +315,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				201BA1B919D0707D00D41141 /* back3.png in Resources */,
-				201BA1C619D0708800D41141 /* hoshi11.png in Resources */,
-				201BA1CB19D0708800D41141 /* hoshi23.png in Resources */,
 				201BA19219D06F8900D41141 /* Images.xcassets in Resources */,
-				201BA1C519D0708800D41141 /* hoshi01.png in Resources */,
 				201BA1BB19D0707D00D41141 /* back5.png in Resources */,
-				201BA1C919D0708800D41141 /* hoshi21.png in Resources */,
-				201BA1C819D0708800D41141 /* hoshi13.png in Resources */,
 				201BA1BA19D0707D00D41141 /* back4.png in Resources */,
 				201BA18419D06F8900D41141 /* InfoPlist.strings in Resources */,
+				20282DD719D6AC8200938303 /* hoshi99.png in Resources */,
 				201BA1B719D0707D00D41141 /* back1.png in Resources */,
-				201BA1CC19D0708800D41141 /* hoshi99.png in Resources */,
-				2020AE1219D4542D00951053 /* hisyatai1.png in Resources */,
 				201BA18D19D06F8900D41141 /* Main.storyboard in Resources */,
-				2020AE1319D4542D00951053 /* hisyatai2.png in Resources */,
-				201BA1CA19D0708800D41141 /* hoshi22.png in Resources */,
-				201BA1C719D0708800D41141 /* hoshi12.png in Resources */,
+				20282DD019D6AC8200938303 /* hoshi01.png in Resources */,
+				20282DD219D6AC8200938303 /* hoshi12.png in Resources */,
 				201BA1B819D0707D00D41141 /* back2.png in Resources */,
+				20282DD119D6AC8200938303 /* hoshi11.png in Resources */,
+				20282DD919D6BA1800938303 /* hisyatai1.png in Resources */,
+				20282DD519D6AC8200938303 /* hoshi22.png in Resources */,
+				20282DD619D6AC8200938303 /* hoshi23.png in Resources */,
+				20282DD319D6AC8200938303 /* hoshi13.png in Resources */,
+				20282DD419D6AC8200938303 /* hoshi21.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20282DC619D69F9500938303 /* homeViewController.m in Sources */,
 				201BA1B019D0706500D41141 /* editLineViewController.m in Sources */,
-				201BA19019D06F8900D41141 /* ViewController.mm in Sources */,
+				201BA19019D06F8900D41141 /* editStarViewController.mm in Sources */,
 				201BA18A19D06F8900D41141 /* AppDelegate.m in Sources */,
 				201BA18619D06F8900D41141 /* main.m in Sources */,
 				201BA1CF19D07F5700D41141 /* DragView.m in Sources */,

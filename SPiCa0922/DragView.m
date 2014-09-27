@@ -41,15 +41,7 @@
 //色と形を指定して、変更するメソッド
 
 -(void)changeFigure:(NSInteger )figure {
-/*    switch (figure) {
-        case 1:
-            self.image = 
-            break;
-            
-        default:
-            break;
-    }
-*/
+
 }
 
 

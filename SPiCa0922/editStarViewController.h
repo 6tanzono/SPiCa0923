@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface editStarViewController : UIViewController
 
-@property NSMutableDictionary *params;
+
+
+@property UIImage *picture;
 
 @end

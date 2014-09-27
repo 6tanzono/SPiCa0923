@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1AY-ip-k8D">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
+        <scene sceneID="B0a-v9-pQP">
+            <objects>
+                <viewController id="gH7-Qm-DHJ" customClass="homeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dui-I2-fIf"/>
+                        <viewControllerLayoutGuide type="bottom" id="qmb-zF-Uk6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EO2-a3-4Qo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFf-hI-2Ys">
+                                <rect key="frame" x="97" y="269" width="127" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="写真を撮る">
+                                    <color key="titleColor" red="0.72232262599999997" green="0.87359805079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Camera:" destination="gH7-Qm-DHJ" eventType="touchUpInside" id="8kS-rx-dxV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPJ-uW-s3K">
+                                <rect key="frame" x="50" y="344" width="221" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="アルバムから選択する">
+                                    <color key="titleColor" red="0.72232262599999997" green="0.87359805079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Album:" destination="gH7-Qm-DHJ" eventType="touchUpInside" id="hK6-mA-ZFD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xhh-9o-i8r"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="toEditStar" id="ilT-Ak-arL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJc-Cl-eBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="153"/>
+        </scene>
+        <!--Edit Star View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editStarViewController" id="vXZ-lx-hvc" customClass="editStarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,27 +61,19 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWL-Bn-8Mz">
-                                <rect key="frame" x="0.0" y="10" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="QH3-C8-OYz">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="73u-bd-Suf"/>
-                                        <barButtonItem key="rightBarButtonItem" title="決定" id="bWd-Qc-FxY">
-                                            <connections>
-                                                <segue destination="XRh-7h-U8R" kind="modal" identifier="toEditLine" id="qK2-W8-dFj"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f8K-rD-RCZ">
+                        <barButtonItem key="rightBarButtonItem" title="決定" id="cTD-q3-GMR">
+                            <connections>
+                                <segue destination="XRh-7h-U8R" kind="push" identifier="toEditLine" id="J2v-gv-hpf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1216" y="144"/>
         </scene>
         <!--Edit Line View Controller-->
         <scene sceneID="pMJ-td-Jnv">
@@ -48,29 +86,31 @@
                     <view key="view" contentMode="scaleToFill" id="h5Q-RQ-vyX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYP-3d-xoN">
-                                <rect key="frame" x="0.0" y="11" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="VnN-2P-YbY">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="AIe-mJ-Xje">
-                                            <connections>
-                                                <action selector="closeView:" destination="XRh-7h-U8R" id="jNp-3S-ymO"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="完了" id="uBf-Cu-v9A"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oVB-PX-rON"/>
+                    <navigationItem key="navigationItem" id="bT7-VV-zRs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwm-py-LXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="138"/>
+            <point key="canvasLocation" x="1657" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qSq-hy-B4c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1AY-ip-k8D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H8Y-v9-yra">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gH7-Qm-DHJ" kind="relationship" relationship="rootViewController" id="b76-Js-FRx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeD-L2-XSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="141"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
